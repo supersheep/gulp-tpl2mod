@@ -1,0 +1,3 @@
+define(function(require, exports, module){
+    module.exports = '<div class="pic-txt"><div class="pic"><a href="/shop/<%=shopId%>/photos/tag-%E8%8F%9C-<%=menuItem%>" target="_blank" title=""><img title="" src=\'<%=picUrls[0]%>\'></a></div><div class="txt"><div class="tag"><% tags.forEach(function(tag){ %><a href="javascript:;" title=""><%=tag.name%></a><% }); %></div><a href="/shop/<%=shopId%>/dish-<%=menuItem%>" target="_blank" title="" class="more">相关点评»</a></div></div>'
+});
