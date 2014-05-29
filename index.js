@@ -4,8 +4,8 @@ var tpl2mod = require("tpl2mod");
 
 module.exports = function(options){
     options = merge({
-      prefix:"define(function(require, exports, module){\n    module.exports = ",
-      suffix:"\n});",
+      prefix:"",
+      suffix:"",
       trimline:true,
       remainbreak:false
     },options);

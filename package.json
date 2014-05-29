@@ -1,6 +1,6 @@
 {
   "name": "gulp-tpl2mod",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "gulp plugin to transform plain text to javascript string",
   "main": "index.js",
   "scripts": {
