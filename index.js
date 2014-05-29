@@ -1,5 +1,6 @@
 var map = require("map-stream");
 var merge = require("merge");
+var util = require('gulp-util');
 var tpl2mod = require("tpl2mod");
 
 module.exports = function(options){
@@ -12,6 +13,7 @@ module.exports = function(options){
 
     return map(function(file,cb){
         file.contents = new Buffer(tpl2mod(file.contents.toString('utf8'),options));
-        cb(null, file)
+        file.path = util.replaceExtension(file.path, '.html.js');
+        cb(null, file);
     });
 }
