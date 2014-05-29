@@ -12,6 +12,7 @@ module.exports = function(options){
 
     return map(function(file,cb){
         file.contents = new Buffer(tpl2mod(file.contents.toString('utf8'),options));
-        cb(null, file)
+        file.path = file.path + '.js';
+        cb(null, file);
     });
 }
