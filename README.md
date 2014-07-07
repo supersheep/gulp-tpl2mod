@@ -10,7 +10,7 @@ var tpl = require('gulp-tpl2mod');
 gulp.task('template', function(){
   gulp.src(path.join(__dirname, 'templates/*.html'))
       .pipe(tpl({
-        suffix: '-tmpl'
+        remainbreak: true
       }));
 ```
 
