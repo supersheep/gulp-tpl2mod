@@ -15,7 +15,7 @@ Build to CommonJS module
         prefix: 'module.exports=require("tpl").compile(',
         suffix: ')'
       }))
-      .pipe(gulp.dest('templates'));
+      .pipe(gulp.dest(path.join(__dirname, 'built_templates/')));
 ```
 Build to AMD module
 ```javascript
@@ -24,7 +24,7 @@ Build to AMD module
         prefix: 'define(["tpl"],function(tpl){return tpl.compile(',
         suffix: ')})'
       }))
-      .pipe(gulp.dest('templates'));
+      .pipe(gulp.dest(path.join(__dirname, 'built_templates/')));
 ```
 You may adjust `tpl` in prefix string as need.
 
